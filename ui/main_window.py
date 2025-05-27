@@ -17,11 +17,8 @@ class BeGreenApp:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("BeGreen!")
-        self.root.geometry("1400x800")
+        self.root.state("zoomed")  # Active le mode plein écran fenêtré
         self.root.resizable(True, True)
-
-        # Centrer la fenêtre sur l'écran
-        self._center_window()
 
         # Essayer de charger des polices modernes
         self._setup_fonts()
@@ -320,20 +317,3 @@ class BeGreenApp:
     def run(self):
         """Lance l'application"""
         self.root.mainloop()
-
-    def _center_window(self):
-        """Centre la fenêtre sur l'écran"""
-        # Obtenir les dimensions de l'écran
-        screen_width = self.root.winfo_screenwidth()
-        screen_height = self.root.winfo_screenheight()
-
-        # Dimensions de la fenêtre
-        window_width = 1400  # Même valeur que dans geometry()
-        window_height = 800  # Même valeur que dans geometry()
-
-        # Calculer la position pour centrer la fenêtre
-        position_x = (screen_width - window_width) // 2
-        position_y = (screen_height - window_height) // 2
-
-        # Définir la taille et la position de la fenêtre
-        self.root.geometry(f"{window_width}x{window_height}+{position_x}+{position_y}")
