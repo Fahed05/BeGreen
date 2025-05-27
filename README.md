@@ -1,6 +1,6 @@
 # BeGreen! 🌱
 
-**Application d'analyse Green IT pour réduire la pollution numérique en entreprise**
+**LA solution pour réduire la pollution numérique en entreprise**
 
 BeGreen! analyse la consommation des fichiers sur les ordinateurs et propose des solutions pour améliorer l'empreinte écologique numérique.
 
@@ -10,13 +10,19 @@ BeGreen! analyse la consommation des fichiers sur les ordinateurs et propose des
 - **Détection de doublons** : Identification et suppression des fichiers dupliqués
 - **Conseils personnalisés** : Recommandations pour optimiser le stockage
 - **Interface intuitive** : Design simple pour tous les employés
-- **Thèmes** : Mode clair et sombre disponibles
+- **Thèmes** : Mode clair et sombre
 
 ## 📦 Installation
 
 ### Prérequis
 - Python 3.7+
+- Pillow (bibliothèque pour le traitement des images)
 - Tkinter (inclus avec Python)
+
+### Installation des dépendances
+```bash
+pip install -r requirements.txt
+```
 
 ### Lancement
 ```bash
@@ -36,9 +42,11 @@ BeGreen/
 ├── file_analyzer.py     # Analyse des fichiers
 ├── ui/
 │   ├── __init__.py
-│   ├── main_window.py   # Interface principale
 │   ├── dashboard.py     # Tableau de bord
+│   ├── main_window.py   # Interface principale
 │   └── settings.py      # Paramètres
+├── data/
+│   ├── sub_BeGreen.png  # Logo
 └── README.md
 ```
 
@@ -59,4 +67,4 @@ Le score Green IT est calculé selon :
 
 ## 🛠️ Développement
 
-Développé en Python avec Tkinter pour Windows 11, architecture modulaire pour faciliter la maintenance.
+Développé en Python avec Pillow et Tkinter pour Windows 11, architecture modulaire pour faciliter la maintenance.
