@@ -2,13 +2,16 @@
 Gestion de la configuration de l'application BeGreen!
 """
 
-import json
 import os
+import json
 
 
 class ConfigManager:
-    def __init__(self, config_file="begreen_config.json"):
-        self.config_file = config_file
+    def __init__(self, config_file=None):
+        # Définir le chemin par défaut dans le dossier `data`
+        data_folder = os.path.join(os.getcwd(), "data")
+        os.makedirs(data_folder, exist_ok=True)  # Crée le dossier `data` s'il n'existe pas
+        self.config_file = config_file or os.path.join(data_folder, "begreen_config.json")
         self.default_config = {
             'username': '',
             'theme': 'clair'
